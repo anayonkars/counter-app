@@ -25,6 +25,16 @@ class Counters extends Component {
     this.setState({ counters });
   };
 
+  handleResetAll = () => {
+    const counters = [
+      { id: 1, value: 0 },
+      { id: 2, value: 0 },
+      { id: 3, value: 0 },
+      { id: 4, value: 0 },
+    ];
+    this.setState({ counters });
+  };
+
   handleIncrement = (counter) => {
     console.log(counter);
     const counters = [...this.state.counters];
@@ -43,6 +53,12 @@ class Counters extends Component {
           className="btn btn-primary btn-sm btn-m2"
         >
           Reset
+        </button>
+        <button
+          onClick={this.handleResetAll}
+          className="btn btn-primary btn-sm m-2"
+        >
+          Reset All
         </button>
         {this.state.counters.map((counter) => (
           <Counter
