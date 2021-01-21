@@ -1,28 +1,6 @@
 import React, { Component } from "react";
 
 class Counter extends Component {
-  // state = {
-  //   value: this.props.counter.value,
-  // };
-
-  // constructor() {
-  //   super();
-  //   this.handleIncrement = this.handleIncrement.bind(this);
-  // }
-
-  // handleIncrement = (product) => {
-  //   console.log(product)
-  //   this.setState({value: this.state.value + 1});
-  // };
-
-  // doHandleIncrement = () => {
-  //   this.handleIncrement({id: 1});
-  // }
-
-  // handleDecrement = () => {
-  //   this.setState({count: this.state.count - 1});
-  // }
-
   render() {
     return (
       <div>
@@ -33,7 +11,6 @@ class Counter extends Component {
         >
           Increment
         </button>
-        {/* <button onClick={this.handleDecrement} className="btn btn-secondary btn-sm">Decrement</button> */}
         <button
           onClick={() => this.props.onDelete(this.props.counter.id)}
           className="btn btn-danger btn-sm m-2"
