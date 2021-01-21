@@ -13,7 +13,6 @@ class App extends Component {
     ],
   };
   handleDelete = (counterId) => {
-    console.log("Event Handler Called", counterId);
     const counters = this.state.counters.filter((c) => c.id !== counterId);
     this.setState({ counters });
   };
@@ -37,22 +36,18 @@ class App extends Component {
   };
 
   handleIncrement = (counter) => {
-    console.log(counter);
     const counters = [...this.state.counters];
     const index = counters.indexOf(counter);
     counters[index] = { ...counter };
     counters[index].value++;
-    console.log(this.state.counters[0]);
     this.setState({ counters });
   };
 
   handleDecrement = (counter) => {
-    console.log(counter);
     const counters = [...this.state.counters];
     const index = counters.indexOf(counter);
     counters[index] = { ...counter };
     counters[index].value--;
-    console.log(this.state.counters[0]);
     this.setState({ counters });
   };
 
