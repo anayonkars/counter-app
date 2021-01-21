@@ -6,7 +6,7 @@ class NavBar extends Component {
     return (
       <nav className="navbar navbar-light bg-light">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand" href="http://localhost:3000">
             Unique{" "}
             <span className="badge badge-pill badge-secondary">
               {this.props.totalCounters}
